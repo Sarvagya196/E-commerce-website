@@ -9,7 +9,7 @@ function Header(){
     //const activeUser = JSON.parse(localStorage.getItem("activeUser"));
     const user = JSON.parse(localStorage.getItem("activeUser"));
     let cartItems = JSON.parse(localStorage.getItem("cartProducts"));
-    cartItems = cartItems.filter((item) => (item?.userId === user?.id));
+    cartItems = cartItems?.filter((item) => (item?.userId === user?.id));
     //let numInCart = cartItems.length;
     const [activeUser,setActiveUser] = useState(user);
     const [numInCart, setNumber] = useState(cartItems?.length);
