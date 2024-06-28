@@ -8,7 +8,7 @@ function Cart() {
     let cartItems = JSON.parse(localStorage.getItem("cartProducts"));
     const navigate = useNavigate();
     const user = JSON.parse(localStorage.getItem("activeUser"));
-    cartItems = cartItems.filter((item) => (item?.userId === user?.id))
+    cartItems = cartItems?.filter((item) => (item?.userId === user?.id))
     const [initialItems, setInitialItems] = useState(cartItems);
     let subTotal = 0;
 
